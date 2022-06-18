@@ -1,0 +1,15 @@
+.header {
+  background: var(--gray-700);
+  display: flex;
+  justify-content: center;
+}
+
+header p {
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+
+header span {
+  font-size: 2.5rem;
+  color: var(--purple-dark);
+}
