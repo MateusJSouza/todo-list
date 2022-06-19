@@ -1,10 +1,10 @@
 import logo from '../assets/rocket.svg'
-import './Header.module.css'
+import styles from './Header.module.scss'
 
 export function Header() {
   return (
-    <div className="header">
-      <img src={logo} alt="" />
+    <div className={styles.header}>
+      <img src={logo} alt="Logo da to-do list: foguete prestes a ser lançado ao espaço" />
       <p>to<span>do</span></p>
     </div>
   )
