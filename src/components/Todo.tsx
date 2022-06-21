@@ -1,17 +1,21 @@
-import plus from '../assets/plus.svg'
-import styles from'./Todo.module.scss';
+import styles from './Todo.module.scss';
+
+import clipboard from '../assets/Clipboard.svg'
 
 export function Todo() {
   return (
-    <div className={styles.content}>
-      <div className={styles.createTask}>
-        <input type="text" placeholder='Adicione uma nova tarefa' />
+    <div className={styles.container}>
+      <section className={styles.title}>
+        <p>Tarefas criadas <span>0</span></p>
 
-        <button type="submit">
-          Criar
-          <img src={plus} alt="Ícone de criar mais uma tarefa" />
-        </button>
-      </div>
-    </div>    
+        <p>Concluídas <span>0</span></p>
+      </section>
+      
+      <section className={styles.tasks}>
+        <img src={clipboard} alt="Ícone de prancheta: referente a anotações de tarefas" />
+        <p>Você ainda não tem tarefas cadastradas</p>
+        <span>Crie tarefas e organize seus itens a fazer</span>
+      </section>
+    </div>
   )
 }
