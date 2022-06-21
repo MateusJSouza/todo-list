@@ -12,6 +12,7 @@
 
     p:first-child {
       color: var(--blue);
+      font-weight: bold;
     }
 
     span:first-child, span:last-child {
@@ -26,6 +27,7 @@
 
     p:last-child {
       color: var(--purple);
+      font-weight: bold;
     }
   }
 
