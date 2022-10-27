@@ -5,7 +5,7 @@ import { Tasks } from './components/Tasks';
 
 const LOCAL_STORAGE_KEY = 'todo:savedTasks'
 
-import './global.scss'
+import './global.css'
 import './App.module.scss'
 
 export interface ITask {
@@ -32,10 +32,14 @@ export function App() {
       }
     ])
   }
-
+  
+  // Removendo uma tarefa por id
   function deleteTaskById(taskId: string) {
-    // Filtrando a task pelo id para verificar se os dois são iguais
-    const newTasks = tasks.filter(task => task.id === taskId)
+    /* 
+      Filtrando a task e verificando se o task.id é diferente do taskId que
+      foi mandado por parâmetro na função
+    */
+    const newTasks = tasks.filter((task) => task.id !== taskId);
     // Setando no estado
     setTaskAndSave(newTasks)
   }
